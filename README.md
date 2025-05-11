@@ -46,8 +46,11 @@ You can now use the `heroku` CLI program - try running `heroku apps` to confirm 
 
 ## Business Requirements
 * Describe your business requirements
-
-
+What are the business requirements?
+- The client wants to monitor TOC levels and track fluctuations over a year to help with efficient and effective dosing levels.
+- The client wants to be able to predict optimal dosing levels throughout teh year/at anytime.
+Is there any business requiremetn that can be answered with conventional data analysis?
+  
 ## Hypothesis and how to validate?
 * List here your project hypothesis(es) and how you envision validating it (them) 
 
