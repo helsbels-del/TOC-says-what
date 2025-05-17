@@ -12,8 +12,8 @@ It contains 3,276 water samples and 10 variables, with TOC being our target vari
 ## Business Requirements
 
 A fictional water treatment plant, have been keeping their chlorine levels well within regulations, however, they have recently failed a quarterly audit based on exceeding THM levles.
-THM (trihalomethanes) are formed when chlorine reacts with organic material such as algae or decaying leaves and wood matter. THMs are colorless and odorless and also a known health risk in high concentrations, accumulatively.
-What if they could predict THM concentratioon based on the TOC (total organic carbon) values of the raw water as it comes into the treatment plant?
+THM (trihalomethanes) are formed when chlorine reacts with organic material such as algae or decaying leaves and wood matter. THMs are colourless and odorless and also a known health risk in high concentrations, accumulatively.
+The client wants to see if they would be able to predict THM concentrations based on the TOC (total organic carbon) values of the raw water as it comes into the treatment plant?
 
 Business requirement 1 - Accurately Predict THM Levels Using Available Water Quality Data.
 The system must be able to predict Trihalomethane (THM) concentrations in drinking water using routinely monitored parameters such as Total Organic Carbon (TOC), pH, Turbidity, and Chloramines. This prediction will help identify potential THM exceedances before chlorine dosing decisions are made.
@@ -27,7 +27,7 @@ Understanding the key contributors to THM formation allows water quality teams t
 
 Hypothesis 1
 
-- Higher TOC levles are associated with higher THM concentrations.
+- Higher TOC levels means higher THM concentrations.
   Rationale: THMs form when disinfectants like chlorine react with organic matter (TOC).
   Validation: Use correltation analysis between TOC and THM (Trihalomethanes). Visulaise with scatter plots and trend lines.
   Fit a linear regression model and check the coefficient significance for TOC.
@@ -39,6 +39,14 @@ Hypothesis 2
   Validation: Train regression models (Random Forest, XGBoost), Evaluate performance usiing R2, MAE and RMSE, ensure >70% on the test set.
 
 ## The rationale to map the business requirements to the Data Visualizations and ML tasks
+
+# Buisness requirement 1
+
+- To predict THMs accurately, we need to train regression  models on TOC
+- We can use Pearsons method to detect a linear relationship.
+- Otherwise the Spearman's method can detect monotonic relationships.
+- 
+
 
 
 * List your business requirements and a rationale to map them to the Data Visualizations and ML tasks
