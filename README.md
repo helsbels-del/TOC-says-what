@@ -1,25 +1,34 @@
 # TOC Says What
 
-TOC Says What is a machine learning (ML) project aimed at predicitng disinfection byproducts from water quality metric data.
-This project uses machine learning to predict THM concentration from TOC, pH, turbidity, and conductivity, providing indirect insights for chlorine dosing strategies
+## Project Overview
+Water quality monitoring is an important public health concern. Disinfection by-products such as Trihalomethanes (THMs) can be harmful in high accumulative concentrations. These chemical compounds are formed when disinfectants, used to treat the raw water, react with the organic carbon material that is naturally found in raw waters.
+This project uses machine learning to predict THM concentrations based on TOC and other water quality features, identify the conditions under whcih the THM levels become unsafe, and also help in managing chemical dosing strategies.
 
 ## Dataset Content
 
-I have choosen to use a data set from kaggle - Water Quality Prediction (7 models)
+The dataset used for this project is taken from a Kaggle water potability dataset.
 All of the data is public and therefore no privacy or ethical issues have been breached.
-It contains 3,276 water samples and 10 variables, with TOC being our target variable.
+It contains 3,276 water samples and 10 variables.
+The variables are:
+- pH
+- Hardness
+- Solids
+- Chloramines
+- Sulfate
+- Conductivity
+- TOC
+- Trihalomethanes
+- Turbidity
+- Potability
 
 ## Business Requirements
 
-A fictional water treatment plant, have been keeping their chlorine levels well within regulations, however, they have recently failed a quarterly audit based on exceeding THM levles.
-THM (trihalomethanes) are formed when chlorine reacts with organic material such as algae or decaying leaves and wood matter. THMs are colourless and odorless and also a known health risk in high concentrations, accumulatively.
-The client wants to see if they would be able to predict THM concentrations based on the TOC (total organic carbon) values of the raw water as it comes into the treatment plant?
-
 Business requirement 1 - Accurately Predict THM Levels Using Available Water Quality Data.
-The system must be able to predict Trihalomethane (THM) concentrations in drinking water using routinely monitored parameters such as Total Organic Carbon (TOC), pH, Turbidity, and Chloramines. This prediction will help identify potential THM exceedances before chlorine dosing decisions are made.
+The system must be able to predict Trihalomethane (THM) concentrations in drinking water using routinely monitored parameter Total Organic Carbon (TOC).
+This prediction will help identify potential THM exceedances before chlorine dosing decisions are made.
 By forecasting THM levels ahead of time, treatment plant operators can adjust chlorine dosing or activate additional treatment steps proactively, reducing the risk of regulatory violations and public health concerns.
 
-Business requirement 2 - Identify Key Drivers of THM Formation for Water Quality Management.
+Business requirement 2 - Identify the conditions resuulting in high THM levels.
 The system must provide insights into the most influential water quality parameters contributing to high THM levels. This feature will support decision-makers in adjusting treatment strategies and monitoring priorities.
 Understanding the key contributors to THM formation allows water quality teams to prioritize monitoring efforts (e.g., focus on TOC spikes) and implement targeted interventions.
 
@@ -27,15 +36,14 @@ Understanding the key contributors to THM formation allows water quality teams t
 
 Hypothesis 1
 
-- Higher TOC levels means higher THM concentrations.
-  Rationale: THMs form when disinfectants like chlorine react with organic matter (TOC).
-  Validation: Use correltation analysis between TOC and THM (Trihalomethanes). Visulaise with scatter plots and trend lines.
+- Higher TOC levels means higher THM concentrations.  
+  Validation: Use correltation analysis between TOC and THM (Trihalomethanes).
+  Visulaise with scatter plots and trend lines.
   Fit a linear regression model and check the coefficient significance for TOC.
 
 Hypothesis 2
 
 - A ML model can predict THM levels with at least 70% accuracy using water quality features.
-  Rational: If features are strong predictors, ML should show the patterns.
   Validation: Train regression models (Random Forest, XGBoost), Evaluate performance usiing R2, MAE and RMSE, ensure >70% on the test set.
 
 ## The rationale to map the business requirements to the Data Visualizations and ML tasks
@@ -45,7 +53,8 @@ Hypothesis 2
 - To predict THMs accurately, we need to train regression  models on TOC
 - We can use Pearsons method to detect a linear relationship.
 - Otherwise the Spearman's method can detect monotonic relationships.
-- 
+  
+  
 
 
 
@@ -57,6 +66,16 @@ Hypothesis 2
 
 
 ## Dashboard Design
+
+### Page 1: Project Summary
+
+- Project Summary
+  - Terms and Jargon
+  - Project Database
+  - Business Requirements
+  
+### Page 2:   
+
 * List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other item that your dashboard library supports.
 * Later, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project you were confident you would use a given plot to display an insight but subsequently you used another plot type).
 
