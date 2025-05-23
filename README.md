@@ -2,7 +2,7 @@
 
 ## Project Overview
 Water quality monitoring is an important public health concern. Disinfection by-products such as Trihalomethanes (THMs) can be harmful in high accumulative concentrations. These chemical compounds are formed when disinfectants, used to treat the raw water, react with the organic carbon material that is naturally found in raw waters.
-This project uses machine learning to predict THM concentrations based on TOC and other water quality features, identify the conditions under whcih the THM levels become unsafe, and also help in managing chemical dosing strategies.
+This project uses machine learning to predict THM concentrations based on TOC and other water quality features, identify the conditions under which the THM levels become unsafe, and also help in managing chemical dosing strategies.
 
 ## Dataset Content
 
